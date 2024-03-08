@@ -8,4 +8,16 @@ export const routes: Routes = [
         (m) => m.PagesInicioComponent
       ),
   },
+  {
+    path: 'producto',
+    loadComponent: () =>
+      import('./pages/pages-producto/pages-producto.component').then(
+        (c) => c.PagesProductoComponent
+      ),
+  },
+  {
+    path: '',
+    redirectTo: 'producto',
+    pathMatch: 'full',
+  },
 ];
